@@ -1,0 +1,67 @@
+/* Styles for Description Container */
+.description-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Style */
+.title {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Subtitle Style */
+.subtitle {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Content Style */
+.content {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Key Features List Style */
+.content ol {
+    margin-left: 20px;
+}
+
+/* Key Features List Item Style */
+.content ol li {
+    margin-bottom: 10px;
+}
+
+/* Technologies Used List Style */
+.content ul {
+    margin-left: 20px;
+}
+
+/* Technologies Used List Item Style */
+.content ul li {
+    margin-bottom: 10px;
+}
+
+/* Animation for Description Container */
+.description-container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

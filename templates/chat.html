@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat.css') }}">
+    <title>Environmental Crisis Chatbot</title>
+</head>
+
+<body>
+
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="user-image-container">
+                <img src="static\dp.jpg" alt="User" class="user-image">
+            </div>
+            <div class="user-details">
+                <h2 class="user-name">EcoGuardian</h2>
+                <p class="user-status">Status: Online</p>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            {% for entry in chat_history %}
+            {% if entry.user_input %}
+            <div class="message user-message">
+                <span class="message-username">You:</span> {{ entry.user_input }}
+            </div>
+            {% endif %}
+            {% if entry.bot_response %}
+            <div class="message bot-message">
+                <span class="message-username">EcoGuardian:</span> {{ entry.bot_response }}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="chat-input-container">
+            <form action="/submit_message" method="post" id="chat-form">
+                <input type="text" name="user_input" id="user-input" placeholder="Type your message...">
+                <button type="submit" id="submit-button">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function scrollToBottom() {
+            var chatMessages = document.getElementById('chat-messages');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        window.onload = function () {
+            scrollToBottom();
+        };
+
+        document.getElementById('chat-form').addEventListener('submit', function () {
+            setTimeout(scrollToBottom, 0);
+        });
+    </script>
+</body>
+
+</html>

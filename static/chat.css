@@ -1,0 +1,166 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background-image: url('r.jpg'); /* Adjust path as needed */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Chat container styles */
+.chat-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Chat header styles */
+.chat-header {
+    background-color: #128C7E;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+   
+}
+
+/* User image styles */
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* User details styles */
+.user-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* User name styles */
+.user-name {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* User status styles */
+.user-status {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* Chat messages styles */
+.chat-messages {
+    padding: 10px;
+    flex-grow: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 450px;
+}
+
+/* Message styles */
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Keyframes for message fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* User message styles */
+.user-message {
+    background-color: #DCF8C6;
+    align-self: flex-end;
+}
+
+/* Bot message styles */
+.bot-message {
+    background-color: #F0F0F0;
+    align-self: flex-start;
+}
+
+/* Message username styles */
+.message-username {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #555;
+}
+
+/* Chat input container styles */
+.chat-input-container {
+    display: flex;
+    padding: 10px;
+    max-width: 600px;
+    background-color: #f2f2f2;
+    align-items: center;
+}
+
+/* User input styles */
+#user-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Submit button styles */
+#submit-button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hover styles for submit button */
+#submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Focus styles for user input */
+#user-input:focus {
+    outline: none;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .chat-container {
+        margin: 20px auto;
+        max-width: 90%;
+    }
+    .chat-input-container {
+        max-width: 90%;
+    }
+}
